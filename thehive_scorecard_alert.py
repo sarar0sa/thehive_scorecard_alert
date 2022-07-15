@@ -117,6 +117,7 @@ def create_alert_object(new_issue):
     )
     return alert
 
+# Check if ID already in issue file. Added because Scorecard "backports" the dates of the new issues.
 def id_in_file(id):
     with open('/home/csirt/thehive_alert/issue_id_scorecard.txt', 'a+') as file:
         file.seek(0)
